@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CounterOutputComponent } from './components/counter-output/counter-output.component';
+import { CounterControlsComponent } from './components/counter-controls/counter-controls.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ CounterOutputComponent, CounterControlsComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'NGRX';
