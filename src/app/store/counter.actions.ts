@@ -1,5 +1,8 @@
 import { Action } from '@ngrx/store';
 
+export const INCREMENT = '[Counter] Increment';
+export const DECREMENT = '[Counter] decrement';
+
 // export const incerment = createAction(
 //   '[Counter] Increment',
 //   props<{ value: number }>()
@@ -11,11 +14,13 @@ import { Action } from '@ngrx/store';
 // );
 
 export class IncrementAction implements Action {
-  readonly type: string = '[Counter] Increment';
+  readonly type: string = INCREMENT;
   constructor(public value: number) {}
 }
 
 export class DecrementAction implements Action {
-  readonly type: string = '[Counter] decrement';
+  readonly type: string = DECREMENT;
   constructor(public value: number) {}
 }
+
+export type CounterActions = IncrementAction | DecrementAction;
